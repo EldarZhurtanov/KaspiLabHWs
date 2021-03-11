@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace HW0803.Interfaces
 {
-    public interface IElevatorCarConfiguration
+    public interface IElevatorSystemConfiguration
     {
-        int CapacityOfPeople { get; set; }
-        int DoorClosingTime { get; set; }
+        int DelayBeforeClosingDoors { get; set; }
     }
 }

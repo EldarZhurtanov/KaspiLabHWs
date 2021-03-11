@@ -9,5 +9,6 @@ namespace HW0803.Interfaces
     public interface IElevatorEngineConfiguration
     {
         int WeightLimit { get; set; }
+        int Speed { get; set; }
     }
 }

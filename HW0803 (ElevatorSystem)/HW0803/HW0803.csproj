@@ -33,8 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.7.8\lib\net45\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,21 +51,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IBuildingConfiguration.cs" />
+    <Compile Include="ConfigNLog.cs" />
+    <Compile Include="Interfaces\IElevatorCar.cs" />
+    <Compile Include="Interfaces\IElevatorSystemConfiguration.cs" />
+    <Compile Include="Interfaces\IFloor.cs" />
     <Compile Include="Interfaces\IElevatorCarConfiguration.cs" />
     <Compile Include="Interfaces\IElevatorEngine.cs" />
     <Compile Include="Interfaces\IElevatorEngineConfiguration.cs" />
-    <Compile Include="Interfaces\IElevetorSystem.cs" />
+    <Compile Include="Interfaces\IElevatorSystem.cs" />
     <Compile Include="Interfaces\ITransportedGoods.cs" />
+    <Compile Include="Models\ElevatorCar.cs" />
+    <Compile Include="Models\ElevatorCarConfiguration.cs" />
+    <Compile Include="Models\ElevatorEngine.cs" />
+    <Compile Include="Models\ElevatorEngineConfiguration.cs" />
+    <Compile Include="Models\ElevatorSystem.cs" />
     <Compile Include="Models\ElevatorSystemCodes.cs" />
+    <Compile Include="Models\ElevatorSystemConfiguration.cs" />
+    <Compile Include="Models\ElevatorSystemFastBuilder.cs" />
+    <Compile Include="Models\Floor.cs" />
+    <Compile Include="Models\TransportedGoods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

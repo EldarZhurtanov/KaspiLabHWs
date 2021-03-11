@@ -8,9 +8,8 @@ namespace HW0803.Interfaces
 {
     public interface IElevatorEngine
     {
-        IElevatorEngineConfiguration Configuration { get; set; }
-
-        void Up(double meters);
-        void Down(double meters);
+        IElevatorEngineConfiguration EngineConfiguration { get; set; }
+        bool IsBreak { get; set; }
+        void Move(double meters);
     }
 }

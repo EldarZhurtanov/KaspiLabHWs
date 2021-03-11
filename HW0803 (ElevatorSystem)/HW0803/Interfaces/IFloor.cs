@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace HW0803.Interfaces
 {
-    public interface IBuildingConfiguration
+    public interface IFloor
     {
-        IEnumerable<double> HeightOfFloorsRelativeToZero { get; set; }
+        double HeightRelativeToZero { get; set; }
+        int FloorNumber { get; set; }
     }
 }
